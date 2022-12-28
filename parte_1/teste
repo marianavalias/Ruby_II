@@ -1,0 +1,12 @@
+#importancia de um acumulador, valor temporario 
+def conta(texto, letra)
+  for i in 0..(texto.size-1)
+    for caractere in texto.chars #array de caracteres, a cara caractere dentro se a letra é a mesma soma o total encontrado
+      if caractere  == letra
+      total_encontrado += 1
+    end 
+  end 
+  total_encontrado
+end
+
+#Montagem de algoritimo, pensar igual criança, forma simples e enxuta 
