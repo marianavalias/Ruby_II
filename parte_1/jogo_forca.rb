@@ -49,14 +49,14 @@ def joga(nome)
     chutou_uma_letra = chute.size == 1 #para chutar uma letra 
     if chutou_uma_letra  
       letra_procurada = chute[0]
-      total_encontrado = palavra_secreta.count letra_procurada #pergunta para o Giba sobre o count
+      total_encontrado = palavra_secreta.count letra_procurada #count contador
       if total_encontrado == 0
         puts "Letra encontrada"
         erros += 1
+      else
+        puts "Letra encontrada #{total_encontrado} vezes."
+      end 
     else
-      puts "Letra não encontrada #{total_encontrado} vezes."
-    end 
-  else
       acertou = chute == palavra_secreta #Acertando a palavra secreta 
       if acertou
         puts "Parabéns! Acertou!" 
@@ -68,8 +68,6 @@ def joga(nome)
         erros += 1
       end 
     end
-
-
   end
   puts "Você ganhou #{pontos_ate_agora} pontos."
 end
@@ -78,8 +76,8 @@ nome = dar_boas_vindas
 
 #laço principal do jogo
 loop do
-    joga nome
-    break if nao_quer_jogar? #break quebra, pergunta para o giba 
+  joga nome
+  break if nao_quer_jogar? #verificar 
 end
 
 

@@ -8,5 +8,4 @@ def conta(texto, letra)
   end 
   total_encontrado
 end
-
 #Montagem de algoritimo, pensar igual criança, forma simples e enxuta 
